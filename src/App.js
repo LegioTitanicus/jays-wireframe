@@ -12,9 +12,14 @@ import PrimarySearchAppBar from "./ui/navbar";
 import LeftBarMainFeed from "./ui/LeftBarMainFeed";
 import RightBarSpotlight from "./ui/RightBarSpotlight";
 import theme from "./ui/theme";
+import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
+  paper: {
+    backgroundColor: pallette.primary,
+  },
   LeftBarMainFeed: {},
+  RightBarSpotlight: {},
 }));
 
 function App() {
@@ -28,7 +33,9 @@ function App() {
         <Box mt={10}>
           <Grid container>
             <Grid item xs={8}>
-              <LeftBarMainFeed />
+              <Paper classes={classes.paper}>
+                <LeftBarMainFeed />
+              </Paper>
             </Grid>
 
             <Grid item xs={4}>
